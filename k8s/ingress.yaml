@@ -1,0 +1,20 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  name: app-python-test
+  labels:
+    name: app-python-test
+spec:
+  rules:
+  - host: app-python-test.example.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: app-python-test
+            port: 
+              number: 80
