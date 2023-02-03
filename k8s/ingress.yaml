@@ -3,6 +3,10 @@ kind: Ingress
 metadata:
   annotations:
     kubernetes.io/ingress.class: nginx-internal
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/add-base-url: "true"
+    # nginx.ingress.kubernetes.io/rewrite-target: /$1
+    # nginx.ingress.kubernetes.io/service-upstream: "true"
   name: app-python-test
   labels:
     name: app-python-test

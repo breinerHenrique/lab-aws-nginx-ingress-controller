@@ -97,7 +97,7 @@ controller:
         # -- Name of the ingressClass
         name: nginx-internal
         # -- Is this ingressClass enabled or not
-        enabled: true
+        enabled: false
         # -- Is this the default ingressClass for the cluster
         default: false
         # -- Controller-value of the controller that is processing this ingressClass
@@ -479,6 +479,7 @@ controller:
             # -- Annotations are mandatory for the load balancer to come up. Varies with the cloud service.
             annotations:
               service.beta.kubernetes.io/aws-load-balancer-internal: "true"
+              service.beta.kubernetes.io/aws-load-balancer-type: nlb
             # loadBalancerIP: ""
 
             # -- Restrict access For LoadBalancer service. Defaults to 0.0.0.0/0.
