@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: app-python-test
-        image: <Image>
+        image: breinerhenrique/app-python-test:1
         resources:
           limits:
             memory: "128Mi"
