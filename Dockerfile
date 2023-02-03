@@ -10,6 +10,6 @@ WORKDIR /api
 RUN pip install virtualenv
 RUN virtualenv venv
 RUN source venv/bin/activate
-RUN pip install -r requirements.txt
+RUN pip install -r requeriments.txt
 
 CMD gunicorn -w 2 --threads 2 -b 0.0.0.0:8080 server:app
